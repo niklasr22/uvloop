@@ -124,7 +124,7 @@ class BaseTestDNS:
             b"127.0.0.1", b"80", type=socket.SOCK_STREAM, _patch=patch
         )
 
-    def test_getaddrinfo_12(self):
+    def test_getaddrinfo_10(self):
         # musl always returns ai_canonname but we don't
         patch = self.implementation != "asyncio"
 
@@ -133,7 +133,7 @@ class BaseTestDNS:
             b"127.0.0.1", b"http", type=socket.SOCK_STREAM, _patch=patch
         )
 
-    def test_getaddrinfo_13(self):
+    def test_getaddrinfo_11(self):
         # musl always returns ai_canonname but we don't
         patch = self.implementation != "asyncio"
 
